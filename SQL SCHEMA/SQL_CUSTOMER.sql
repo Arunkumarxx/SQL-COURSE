@@ -101,6 +101,7 @@ INSERT INTO Customers (CustomerID, CustomerName, ContactName, Address, City, Pos
 (91, 'Wolski', 'Zbyszek', 'ul. Filtrowa 68', 'Walla', '01-012', NULL);
 
 select * from personal_database.customers;
+
 /*
  +------------+--------------------------------------+----------------------+------------------------------------------------+-----------------+------------+-------------+
 | CustomerID | CustomerName                         | ContactName          | Address                                        | City            | PostalCode | Country     |
