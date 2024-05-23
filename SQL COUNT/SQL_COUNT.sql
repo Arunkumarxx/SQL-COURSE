@@ -1,2 +1,1 @@
-﻿-- SQL script for SQL COUNT
--- Add your SQL commands here
+﻿-- SQL COUNT() Function
