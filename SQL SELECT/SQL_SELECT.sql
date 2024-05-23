@@ -1,8 +1,8 @@
 ﻿USE personal_database;
 
+select * from studentinfo
 
-INSERT INTO StudentInfo (StudentID, StudentName, Age)
-VALUES (10, 'Arunkumar', 19);
 
-select  * from personal_database.studentinfo
-order by StudentID desc
+# The SELECT statement is used to select data from a database.
+# SELECT column1, column2, ...
+# FROM table_name;
