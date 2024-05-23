@@ -8,6 +8,10 @@
     <file url="file://$PROJECT_DIR$/SQL SCHEMA/SQL_CUSTOMER.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL SCHEMA/SQL_EMPLOYEES.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL SCHEMA/SQL_ORDERDETAILS.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL SCHEMA/SQL_ORDERS.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL SCHEMA/SQL_PRODUCTS.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL SCHEMA/SQL_SHIPPERS.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL SCHEMA/SQL_SUPPLIERS.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL SELECT DISTINCT/SQL_SELECT_DISTINCT.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL SELECT/SQL_SELECT.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL WHERE/SQL_WHERE.sql" dialect="MySQL" />
