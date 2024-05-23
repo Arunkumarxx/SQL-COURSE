@@ -2,9 +2,11 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/SQL AND/SQL_AND.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL AVG/SQL_AVG.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL COUNT/SQL_COUNT.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL DELETE/SQL_DELETE.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL INSERT INTO/SQL_INSERT_INTO.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL LIKE/SQL_LIKE.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL MIN AND MAX/SQL_MIN_AND_MAX.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL NOT/SQL_NOT.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL NULL VALUES/SQL_NULL_VALUES.sql" dialect="MySQL" />
