@@ -17,6 +17,7 @@ SELECT *
 FROM Customers
 WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
 
+
 /*
  +------------+------------------------+-------------------+------------------------+-----------+------------+---------+
 | CustomerID | CustomerName           | ContactName       | Address                | City      | PostalCode | Country |
