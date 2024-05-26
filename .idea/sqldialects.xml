@@ -26,5 +26,6 @@
     <file url="file://$PROJECT_DIR$/SQL SUM/SQL_SUM.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL UPDATE/SQL_UPDATE.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL WHERE/SQL_WHERE.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL WILDCARDS/SQL_WILDCARDS.sql" dialect="MySQL" />
   </component>
 </project>
