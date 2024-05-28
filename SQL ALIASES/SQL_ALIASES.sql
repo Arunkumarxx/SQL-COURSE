@@ -410,100 +410,196 @@ select CustomerID as "id number", CustomerName as "Name list" from customers as 
 +-----------+--------------------------------------+
  */
 
- select customers.CustomerName ,customers.Address +','+customers.PostalCode+','+customers.City as addres from customers;
+# Concatenate Columns
+# The following SQL statement creates an alias named "Address"
+# that combine four columns (Address, PostalCode, City and Country):
+select customers.ContactName,CONCAT(customers.Address,',',customers.PostalCode,',',customers.Country)as address from customers;
 /*
- +--------------------------------------+--------+
-| CustomerName                         | addres |
-+--------------------------------------+--------+
-| Ana Trujillo Emparedados y helados   |   5021 |
-| Antonio Moreno Taquería              |   5023 |
-| Around the Horn                      |    120 |
-| Berglunds snabbköp                   |      0 |
-| Blauer See Delikatessen              |  68306 |
-| Blondel père et fils                 |  67024 |
-| Bólido Comidas preparadas            |  28023 |
-| Bon app'                             |  13020 |
-| Bottom-Dollar Marketse               |     23 |
-| B's Beverages                        |      0 |
-| Cactus Comidas para llevar           |   1010 |
-| Centro comercial Moctezuma           |   5022 |
-| Chop-suey Chinese                    |   3012 |
-| Comércio Mineiro                     |   5432 |
-| Consolidated Holdings                |      0 |
-| Drachenblut Delikatessend            |  52066 |
-| Du monde entier                      |  44067 |
-| Eastern Connection                   |     35 |
-| Ernst Handel                         |   8010 |
-| Familia Arquibaldo                   |   5442 |
-| FISSA Fabrica Inter. Salchichas S.A. |  28034 |
-| Folies gourmandes                    |  59184 |
-| Folk och fä HB                       |      0 |
-| Frankenversand                       |  80805 |
-| France restauration                  |  44054 |
-| Franchi S.p.A.                       |  10100 |
-| Furia Bacalhau e Frutos do Mar       |   1675 |
-| Galería del gastrónomo               |   8022 |
-| Godos Cocina Típica                  |  41101 |
-| Gourmet Lanchonetes                  |   4876 |
-| Great Lakes Food Market              | 100135 |
-| GROSELLA-Restaurante                 |   1086 |
-| Hanari Carnes                        |   5454 |
-| HILARIÓN-Abastos                     |   5022 |
-| Hungry Coyote Import Store           |  97827 |
-| Hungry Owl All-Night Grocers         |   NULL |
-| Island Trading                       |      0 |
-| Königlich Essen                      |  14776 |
-| La corne d'abondance                 |  78067 |
-| La maison d'Asie                     |  31001 |
-| Laughing Bacchus Wine Cellars        |   1900 |
-| Lazy K Kountry Store                 |  99374 |
-| Lehmanns Marktstand                  |  60528 |
-| Let's Stop N Shop                    |  94204 |
-| LILA-Supermercado                    |   3508 |
-| LINO-Delicateses                     |   4980 |
-| Lonesome Pine Restaurant             |  97308 |
-| Magazzini Alimentari Riuniti         |  24100 |
-| Maison Dewey                         |      0 |
-| Mère Paillarde                       |     43 |
-| Morgenstern Gesundkost               |   4179 |
-| North/South                          |      0 |
-| Océano Atlántico Ltda.               |   1010 |
-| Old World Delicatessen               | 102251 |
-| Ottilies Käseladen                   |  50739 |
-| Paris spécialités                    |  75277 |
-| Pericles Comidas clásicas            |   5033 |
-| Piccolo und mehr                     |   5020 |
-| Princesa Isabel Vinhoss              |   1756 |
-| Que Delícia                          |   2389 |
-| Queen Cozinha                        |   5487 |
-| QUICK-Stop                           |   1307 |
-| Rancho grande                        |   1010 |
-| Rattlesnake Canyon Grocery           |  89927 |
-| Reggiani Caseifici                   |  42100 |
-| Ricardo Adocicados                   |   2389 |
-| Richter Supermarkt                   |   1203 |
-| Romero y tomillo                     |  28001 |
-| Santé Gourmet                        |   4110 |
-| Save-a-lot Markets                   |  83907 |
-| Seven Seas Imports                   |     90 |
-| Simons bistro                        |   1734 |
-| Spécialités du monde                 |  75041 |
-| Split Rail Beer & Ale                |  82520 |
-| Suprêmes délices                     |      0 |
-| The Big Cheese                       |  97290 |
-| The Cracker Box                      |  59856 |
-| Toms Spezialitäten                   |  44087 |
-| Tortuga Restaurante                  |   5033 |
-| Tradição Hipermercados               |   5634 |
-| Trail's Head Gourmet Provisioners    |  98756 |
-| Vaffeljernet                         |   8200 |
-| Victuailles en stock                 |  69006 |
-| Vins et alcools Chevalier            |  51159 |
-| Die Wandernde Kuh                    |  70563 |
-| Wartian Herkku                       |  90110 |
-| Wellington Importadora               |   8737 |
-| White Clover Markets                 |  98433 |
-| Wilman Kala                          |  21240 |
-| Wolski                               |      1 |
-+--------------------------------------+--------+
+ +----------------------+---------------------------------------------------------------+
+| ContactName          | address                                                       |
++----------------------+---------------------------------------------------------------+
+| Ana Trujillo         | Avda. de la Constitución 2222,05021,Mexico                    |
+| Antonio Moreno       | Mataderos 2312,05023,Mexico                                   |
+| Thomas Hardy         | 120 Hanover Sq.,WA1 1DP,UK                                    |
+| Christina Berglund   | Berguvsvägen 8,S-958 22,Sweden                                |
+| Hanna Moos           | Forsterstr. 57,68306,Germany                                  |
+| Frédérique Citeaux   | 24, place Kléber,67000,France                                 |
+| Martín Sommer        | C/ Araquil, 67,28023,Spain                                    |
+| Laurence Lebihans    | 12, rue des Bouchers,13008,France                             |
+| Elizabeth Lincoln    | 23 Tsawassen Blvd.,T2F 8M4,Canada                             |
+| Victoria Ashworth    | Fauntleroy Circus,EC2 5NT,UK                                  |
+| Patricio Simpson     | Cerrito 333,1010,Argentina                                    |
+| Francisco Chang      | Sierras de Granada 9993,05022,Mexico                          |
+| Yang Wang            | Hauptstr. 29,3012,Switzerland                                 |
+| Pedro Afonso         | Av. dos Lusíadas, 23,05432-043,Brazil                         |
+| Elizabeth Brown      | Berkeley Gardens 12 Brewery,WX1 6LT,UK                        |
+| Sven Ottlieb         | Walserweg 21,52066,Germany                                    |
+| Janine Labrune       | 67, rue des Cinquante Otages,44000,France                     |
+| Ann Devon            | 35 King George,WX3 6FW,UK                                     |
+| Roland Mendel        | Kirchgasse 6,8010,Austria                                     |
+| Aria Cruz            | Rua Orós, 92,05442-030,Brazil                                 |
+| Diego Roel           | C/ Moralzarzal, 86,28034,Spain                                |
+| Martine Rancé        | 184, chaussée de Tournai,59000,France                         |
+| Maria Larsson        | Åkergatan 24,S-844 67,Sweden                                  |
+| Peter Franken        | Berliner Platz 43,80805,Germany                               |
+| Carine Schmitt       | 54, rue Royale,44000,France                                   |
+| Paolo Accorti        | Via Monte Bianco 34,10100,Italy                               |
+| Lino Rodriguez       | Jardim das rosas n. 32,1675,Portugal                          |
+| Eduardo Saavedra     | Rambla de Cataluña, 23,08022,Spain                            |
+| José Pedro Freyre    | C/ Romero, 33,41101,Spain                                     |
+| André Fonseca        | Av. Brasil, 442,04876-786,Brazil                              |
+| Howard Snyder        | 2732 Baker Blvd.,97403,USA                                    |
+| Manuel Pereira       | 5ª Ave. Los Palos Grandes,1081,Venezuela                      |
+| Mario Pontes         | Rua do Paço, 67,05454-876,Brazil                              |
+| Carlos Hernández     | Carrera 22 con Ave. Carlos Soublette #8-35,5022,Venezuela     |
+| Yoshi Latimer        | City Center Plaza 516 Main St.,97827,USA                      |
+| Patricia McKenna     | NULL                                                          |
+| Helen Bennett        | Garden House Crowther Way,PO31 7PJ,UK                         |
+| Philip Cramer        | Maubelstr. 90,14776,Germany                                   |
+| Daniel Tonini        | 67, avenue de l'Europe,78000,France                           |
+| Annette Roulet       | 1 rue Alsace-Lorraine,31000,France                            |
+| Yoshi Tannamuri      | 1900 Oak St.,V3F 2K1,Canada                                   |
+| John Steel           | 12 Orchestra Terrace,99362,USA                                |
+| Renate Messner       | Magazinweg 7,60528,Germany                                    |
+| Jaime Yorres         | 87 Polk St. Suite 5,94117,USA                                 |
+| Carlos González      | Carrera 52 con Ave. Bolívar #65-98 Llano Largo,3508,Venezuela |
+| Felipe Izquierdo     | Ave. 5 de Mayo Porlamar,4980,Venezuela                        |
+| Fran Wilson          | 89 Chiaroscuro Rd.,97219,USA                                  |
+| Giovanni Rovelli     | Via Ludovico il Moro 22,24100,Italy                           |
+| Catherine Dewey      | Rue Joseph-Bens 532,B-1180,Belgium                            |
+| Jean Fresnière       | 43 rue St. Laurent,H1J 1C3,Canada                             |
+| Alexander Feuer      | Heerstr. 22,04179,Germany                                     |
+| Simon Crowther       | South House 300 Queensbridge,SW7 1RZ,UK                       |
+| Yvonne Moncada       | Ing. Gustavo Moncada 8585 Piso 20-A,1010,Argentina            |
+| Rene Phillips        | 2743 Bering St.,99508,USA                                     |
+| Henriette Pfalzheim  | Mehrheimerstr. 369,50739,Germany                              |
+| Marie Bertrand       | 265, boulevard Charonne,75012,France                          |
+| Guillermo Fernández  | Calle Dr. Jorge Cash 321,05033,Mexico                         |
+| Georg Pipps          | Geislweg 14,5020,Austria                                      |
+| Isabel de Castro     | Estrada da saúde n. 58,1756,Portugal                          |
+| Bernardo Batista     | Rua da Panificadora, 12,02389-673,Brazil                      |
+| Lúcia Carvalho       | Alameda dos Canàrios, 891,05487-020,Brazil                    |
+| Horst Kloss          | Taucherstraße 10,01307,Germany                                |
+| Sergio Gutiérrez     | Av. del Libertador 900,1010,Argentina                         |
+| Paula Wilson         | 2817 Milton Dr.,87110,USA                                     |
+| Maurizio Moroni      | Strada Provinciale 124,42100,Italy                            |
+| Janete Limeira       | Av. Copacabana, 267,02389-890,Brazil                          |
+| Michael Holz         | Grenzacherweg 237,1203,Switzerland                            |
+| Alejandra Camino     | Gran Vía, 1,28001,Spain                                       |
+| Jonas Bergulfsen     | Erling Skakkes gate 78,4110,Norway                            |
+| Jose Pavarotti       | 187 Suffolk Ln.,83720,USA                                     |
+| Hari Kumar           | 90 Wadhurst Rd.,OX15 4NB,UK                                   |
+| Jytte Petersen       | Vinbæltet 34,1734,Denmark                                     |
+| Dominique Perrier    | 25, rue Lauriston,75016,France                                |
+| Art Braunschweiger   | P.O. Box 555,82520,USA                                        |
+| Pascale Cartrain     | Boulevard Tirou, 255,B-6000,Belgium                           |
+| Liz Nixon            | 89 Jefferson Way Suite 2,97201,USA                            |
+| Liu Wong             | 55 Grizzly Peak Rd.,59801,USA                                 |
+| Karin Josephs        | Luisenstr. 48,44087,Germany                                   |
+| Miguel Angel Paolino | Avda. Azteca 123,05033,Mexico                                 |
+| Anabela Domingues    | Av. Inês de Castro, 414,05634-030,Brazil                      |
+| Helvetius Nagy       | 722 DaVinci Blvd.,98034,USA                                   |
+| Palle Ibsen          | Smagsløget 45,8200,Denmark                                    |
+| Mary Saveley         | 2, rue du Commerce,69004,France                               |
+| Paul Henriot         | 59 rue de l'Abbaye,51100,France                               |
+| Rita Müller          | Adenauerallee 900,70563,Germany                               |
+| Pirkko Koskitalo     | Torikatu 38,90110,Finland                                     |
+| Paula Parente        | Rua do Mercado, 12,08737-363,Brazil                           |
+| Karl Jablonski       | 305 - 14th Ave. S. Suite 3B,98128,USA                         |
+| Matti Karttunen      | Keskuskatu 45,21240,Finland                                   |
+| Zbyszek              | NULL                                                          |
++----------------------+---------------------------------------------------------------+
+ */
+
+
+select CONCAT(fn.FirstName,',',fn.LastName)
+as FullName,PersonDetails.CategoryName as
+TypeOfFoodLIke from categories as
+PersonDetails
+,employees as fn  order by fn.FirstName;
+/*
+ +------------------+----------------+
+| FullName         | TypeOfFoodLIke |
++------------------+----------------+
+| Adam,West        | Beverages      |
+| Adam,West        | Condiments     |
+| Adam,West        | Confections    |
+| Adam,West        | Dairy Products |
+| Adam,West        | Grains/Cereals |
+| Adam,West        | Meat/Poultry   |
+| Adam,West        | Produce        |
+| Adam,West        | Seafood        |
+| Andrew,Fuller    | Meat/Poultry   |
+| Andrew,Fuller    | Seafood        |
+| Andrew,Fuller    | Produce        |
+| Andrew,Fuller    | Grains/Cereals |
+| Andrew,Fuller    | Dairy Products |
+| Andrew,Fuller    | Confections    |
+| Andrew,Fuller    | Condiments     |
+| Andrew,Fuller    | Beverages      |
+| Anne,Dodsworth   | Confections    |
+| Anne,Dodsworth   | Beverages      |
+| Anne,Dodsworth   | Condiments     |
+| Anne,Dodsworth   | Dairy Products |
+| Anne,Dodsworth   | Grains/Cereals |
+| Anne,Dodsworth   | Meat/Poultry   |
+| Anne,Dodsworth   | Produce        |
+| Anne,Dodsworth   | Seafood        |
+| Janet,Leverling  | Produce        |
+| Janet,Leverling  | Meat/Poultry   |
+| Janet,Leverling  | Grains/Cereals |
+| Janet,Leverling  | Dairy Products |
+| Janet,Leverling  | Confections    |
+| Janet,Leverling  | Condiments     |
+| Janet,Leverling  | Beverages      |
+| Janet,Leverling  | Seafood        |
+| Laura,Callahan   | Meat/Poultry   |
+| Laura,Callahan   | Produce        |
+| Laura,Callahan   | Grains/Cereals |
+| Laura,Callahan   | Seafood        |
+| Laura,Callahan   | Beverages      |
+| Laura,Callahan   | Confections    |
+| Laura,Callahan   | Condiments     |
+| Laura,Callahan   | Dairy Products |
+| Margaret,Peacock | Produce        |
+| Margaret,Peacock | Condiments     |
+| Margaret,Peacock | Beverages      |
+| Margaret,Peacock | Confections    |
+| Margaret,Peacock | Dairy Products |
+| Margaret,Peacock | Grains/Cereals |
+| Margaret,Peacock | Meat/Poultry   |
+| Margaret,Peacock | Seafood        |
+| Michael,Suyama   | Dairy Products |
+| Michael,Suyama   | Produce        |
+| Michael,Suyama   | Meat/Poultry   |
+| Michael,Suyama   | Grains/Cereals |
+| Michael,Suyama   | Confections    |
+| Michael,Suyama   | Condiments     |
+| Michael,Suyama   | Beverages      |
+| Michael,Suyama   | Seafood        |
+| Nancy,Davolio    | Meat/Poultry   |
+| Nancy,Davolio    | Grains/Cereals |
+| Nancy,Davolio    | Dairy Products |
+| Nancy,Davolio    | Confections    |
+| Nancy,Davolio    | Condiments     |
+| Nancy,Davolio    | Seafood        |
+| Nancy,Davolio    | Beverages      |
+| Nancy,Davolio    | Produce        |
+| Robert,King      | Seafood        |
+| Robert,King      | Grains/Cereals |
+| Robert,King      | Produce        |
+| Robert,King      | Beverages      |
+| Robert,King      | Condiments     |
+| Robert,King      | Confections    |
+| Robert,King      | Dairy Products |
+| Robert,King      | Meat/Poultry   |
+| Steven,Buchanan  | Condiments     |
+| Steven,Buchanan  | Confections    |
+| Steven,Buchanan  | Dairy Products |
+| Steven,Buchanan  | Meat/Poultry   |
+| Steven,Buchanan  | Produce        |
+| Steven,Buchanan  | Seafood        |
+| Steven,Buchanan  | Beverages      |
+| Steven,Buchanan  | Grains/Cereals |
++------------------+----------------+
  */
