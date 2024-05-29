@@ -12,6 +12,7 @@
 # WHERE condition
 # GROUP BY column_name(s)
 # ORDER BY column_name(s);
+use personal_database;
 
 select count( customers.CustomerName) as NumberOfEmployees,customers.City
 from customers group by customers.City order by count(CustomerName) desc;
