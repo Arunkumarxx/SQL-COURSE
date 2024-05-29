@@ -22,6 +22,7 @@
     <file url="file://$PROJECT_DIR$/SQL LIKE/SQL_LIKE.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL MIN AND MAX/SQL_MIN_AND_MAX.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL NOT/SQL_NOT.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL NULL FUNCTIONS/SQL_NULL_FUNCTIONS.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL NULL VALUES/SQL_NULL_VALUES.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL OR/SQL_OR.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL ORDER BY/SQL_ORDER_BY.sql" dialect="MySQL" />
