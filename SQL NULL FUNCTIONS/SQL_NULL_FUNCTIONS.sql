@@ -1,4 +1,5 @@
 ﻿# In MySQL, you can use the IFNULL() function to handle NULL values.
+
 # It returns the first non-NULL expression among its arguments. The syntax for the IFNULL() function is:
 
 # sql
