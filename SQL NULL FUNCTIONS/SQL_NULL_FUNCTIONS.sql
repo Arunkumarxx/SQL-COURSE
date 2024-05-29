@@ -16,6 +16,7 @@
 update customers
 set CustomerName=null
 where CustomerID=2;
+
 # [2024-05-29 20:24:14] 1 row affected in 1 ms
 
 select ifnull(CustomerName,'Unknown') as CustomerName,ifnull(City,'Unknown') as city from customers;
