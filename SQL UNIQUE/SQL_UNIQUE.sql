@@ -9,3 +9,26 @@
 
 # However, you can have many UNIQUE constraints per table, but only
 # one PRIMARY KEY constraint per table.
+
+use personal_database;
+
+create table People
+(
+    id int  ,
+    userName varchar(255) unique not null
+, primary key (id),
+    unique  (userName,id)
+);
+insert into personal_database.people values (1,'arun');
+
+select * from people;
+/*
+ +----+----------+
+| id | userName |
++----+----------+
+|  1 | arun     |
++----+----------+
+ */
+ alter table customers
+ drop primary key ;
+
