@@ -3,8 +3,6 @@
 
 # It's commonly used to bypass authentication or retrieve sensitive data from databases.
 
-# Here's an example where user input is concatenated into SQL queries:
-
 txtUserId = getRequestString("UserId")
 txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId
 
