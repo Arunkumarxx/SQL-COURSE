@@ -4,35 +4,31 @@ This repository contains my SQL course materials, exercises, and notes.
 
 ## Learning Journey
 
-- Started learning SQL on May 21, 2024.
-- Continuously adding new content and notes.
-- Working on practice exercises to strengthen SQL skills.
+- **Started learning SQL on May 21, 2024.**
+- Utilized resources from TutorialsPoint and W3Schools.
+- Emphasized learning SQL fundamentals before diving into specific database systems.
+- **Finished learning SQL on June 1, 2024.**
 
 ## Contents
 
-- **Exercises**
-  - Practice exercises and challenges completed during the course.
-- **Notes**
-  - Detailed notes from each lesson, covering key concepts and queries.
-- **Projects**
-  - Showcase of SQL projects and assignments.
-- **Resources**
-  - Useful links and references related to SQL.
-
-## Progress
-
-- Completed SQL SELECT queries.
-- Learned about SQL JOINs and data manipulation.
-- Currently studying advanced SQL topics like stored procedures and indexing.
-
+- **Exercises**: Practice exercises and challenges completed during the course.
+- **Notes**: Detailed notes from each lesson.
+- **Resources**: 
+  - [TutorialsPoint SQL](https://www.tutorialspoint.com/sql/index.htm)
+  - [W3Schools SQL](https://www.w3schools.com/sql/default.asp)
+  
 ## Goals
 
-- Master SQL fundamentals and advanced concepts.
-- Build real-world projects using SQL databases.
-- Obtain certification in SQL proficiency.
+- Obtain certification in SQL.
+- Plan to learn MySQL for future projects.
+- Learn SQL to solve problems in LeetCode SQL challenges.
 
 ## Additional Information
 
-Feel free to explore the repository and review my progress. If you have any questions, suggestions, or feedback, please don't hesitate to reach out.
+Avoid quick YouTube tutorials claiming to teach SQL in one hour. Instead, learn from comprehensive articles on platforms like TutorialsPoint and W3Schools. These resources cover a wide range of topics, ensuring a comprehensive understanding of SQL. Regular practice is essential.
+
+Used DataGrip by JetBrains and MySQL software for SQL.
+
+Explore the repository and review my progress. If you have any questions, don't hesitate to reach out.
 
 Happy coding!
