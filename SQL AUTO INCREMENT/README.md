@@ -1,17 +1,13 @@
-```markdown
+
 # SQL AUTO INCREMENT Field
 
 ## AUTO INCREMENT Field
 
-Auto-increment allows a unique number to be generated
-automatically when a new record is inserted into a
-table. This feature is often used for the primary key
-field to be created automatically every time a new
-record is inserted.
+Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table. This feature is often used for the primary key field to be created automatically every time a new record is inserted.
 
 ### Example: Creating a Table with AUTO_INCREMENT
 
-sql
+```sql
 CREATE TABLE Employees (
     EmployeeID INT PRIMARY KEY AUTO_INCREMENT,
     FirstName VARCHAR(50),
@@ -19,8 +15,6 @@ CREATE TABLE Employees (
     ...
 );
 ```
-
-### Creating a Table with AUTO_INCREMENT
 
 ```sql
 CREATE TABLE temp (
