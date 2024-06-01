@@ -1,85 +1,62 @@
-```markdown
-# SQL Aliases
+## SQL Aliases
 
-SQL aliases are used to give a table, or a column in a table, a temporary name.
-Aliases are often used to make column names more readable. An alias only exists for
- the duration of that query and is created with the AS keyword.
+SQL aliases provide temporary names for tables or columns within a query, enhancing readability and conciseness.
 
-## Syntax
+### Introduction
 
-When an alias is used on a column:
+- Aliases are used to assign a temporary name to a table or column.
+- They exist only for the duration of the query.
+- Created using the `AS` keyword, although it's often optional.
 
-sql
-SELECT column_name AS alias_name
-FROM table_name;
-```
+### Syntax
 
-When an alias is used on a table:
+- **For columns:**
+  ```sql
+  SELECT column_name AS alias_name
+  FROM table_name;
+  ```
+- **For tables:**
+  ```sql
+  SELECT column_name(s)
+  FROM table_name AS alias_name;
+  ```
 
+### Examples
+
+#### Alias for Columns
 ```sql
-SELECT column_name(s)
-FROM table_name AS alias_name;
+SELECT CustomerID AS ID, CustomerName AS Customer
+FROM Customers;
 ```
 
-## Examples
-
----
-
-### Alias for a Column
-
+#### Using Aliases With Space Character
 ```sql
--- Alias for CustomerID column
-SELECT CustomerID AS tempCol 
-FROM customers;
+-- Using square brackets for aliases with space characters:
+SELECT ProductName AS [My Great Products]
+FROM Products;
+
+-- Using double quotes for aliases with space characters:
+SELECT ProductName AS "My Great Products"
+FROM Products;
 ```
 
----
-
-### Alias for a Table
-
+#### Concatenating Columns
 ```sql
--- Alias for the Customers table
-SELECT * 
-FROM customers AS TempTable;
+-- Creating an alias named "Address" by concatenating columns:
+SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address
+FROM Customers;
 ```
 
----
-
-### Aliases for Multiple Columns
-
+#### Alias for Tables
 ```sql
--- Aliases for multiple columns in the Customers table
-SELECT CustomerID AS col1, CustomerName AS col2 
-FROM customers AS tables;
+-- Referring to the Customers table as Persons:
+SELECT * FROM Customers AS Persons;
 ```
 
----
+### Benefits
+- Shortens SQL statements, particularly useful when working with multiple tables.
+- Enhances readability and comprehensibility of queries.
 
-### Using Double Quotes for Aliases with Spaces
+### Conclusion
 
-```sql
--- Using aliases with spaces enclosed in double quotes
-SELECT CustomerID AS "id number", CustomerName AS "Name list" 
-FROM customers AS xyz_company;
-```
-
----
-
-### Concatenating Columns and Using Alias
-
-```sql
--- Concatenating columns and using alias for the address
-SELECT customers.ContactName, CONCAT(customers.Address, ',', customers.PostalCode, ',', customers.Country) AS address 
-FROM customers;
-```
-
----
-
-### Using Aliases for Multiple Tables
-
-```sql
--- Using aliases for multiple tables and ordering by first name
-SELECT CONCAT(fn.FirstName, ',', fn.LastName) AS FullName, PersonDetails.CategoryName AS TypeOfFoodLike 
-FROM categories AS PersonDetails, employees AS fn 
-ORDER BY fn.FirstName;
-```
+SQL aliases are essential tools for improving query readability and efficiency, allowing developers to create concise and expressive SQL statements. By assigning temporary names to tables and columns, aliases streamline the querying process and make SQL code more manageable.
