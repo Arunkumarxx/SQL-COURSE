@@ -1,42 +1,76 @@
-```markdown
+
 # SQL AND Operator
 
-The `AND` operator in SQL is used in the `WHERE` clause to filter records based on multiple conditions.
+The SQL AND Operator
 
-## Syntax
+The `WHERE` clause can contain one or many `AND` operators.
 
-sql
-SELECT column1, column2, ...
-FROM table_name
-WHERE condition1 AND condition2 AND condition3 ...;
-```
+The `AND` operator is used to filter records based on more than one condition, like if you want to return all customers from Spain that start with the letter 'G'.
 
-## Example 1: Filtering with `AND`
+### Example
 
 ```sql
--- Selecting all customers from Spain whose name starts with 'G'
+-- Select all customers from Spain that start with the letter 'G':
 SELECT *
 FROM Customers
 WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
 ```
 
-| CustomerID | CustomerName           | ContactName       | Address                | City      | PostalCode | Country |
-|------------|------------------------|-------------------|------------------------|-----------|------------|---------|
-| 29         | Galería del gastrónomo | Eduardo Saavedra  | Rambla de Cataluña, 23 | Barcelona | 08022      | Spain   |
-| 30         | Godos Cocina Típica    | José Pedro Freyre | C/ Romero, 33          | Sevilla   | 41101      | Spain   |
-
-## Example 2: Combining `AND` and `OR`
+### Syntax
 
 ```sql
--- Selecting customers from Spain whose name starts with 'G' or 'R'
-SELECT *
-FROM Customers
-WHERE Country = 'Spain'
-AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 AND condition2 AND condition3 ...;
 ```
 
-| CustomerID | CustomerName           | ContactName       | Address                | City      | PostalCode | Country |
-|------------|------------------------|-------------------|------------------------|-----------|------------|---------|
-| 29         | Galería del gastrónomo | Eduardo Saavedra  | Rambla de Cataluña, 23 | Barcelona | 08022      | Spain   |
-| 30         | Godos Cocina Típica    | José Pedro Freyre | C/ Romero, 33          | Sevilla   | 41101      | Spain   |
-| 69         | Romero y tomillo       | Alejandra Camino  | Gran Vía, 1            | Madrid    | 28001      | Spain   |
+## AND vs OR
+
+The `AND` operator displays a record if all the conditions are TRUE.
+
+The `OR` operator displays a record if any of the conditions are TRUE.
+
+## Demo Database
+
+Below is a selection from the Customers table used in the examples:
+
+| CustomerID | CustomerName                | ContactName    | Address                  | City       | PostalCode | Country |
+|------------|-----------------------------|----------------|--------------------------|------------|------------|---------|
+| 1          | Alfreds Futterkiste        | Maria Anders   | Obere Str. 57            | Berlin     | 12209      | Germany |
+| 2          | Ana Trujillo Emparedados y helados | Ana Trujillo | Avda. de la Constitución 2222 | México D.F. | 05021 | Mexico |
+| 3          | Antonio Moreno Taquería    | Antonio Moreno | Mataderos 2312           | México D.F. | 05023      | Mexico |
+| 4          | Around the Horn            | Thomas Hardy   | 120 Hanover Sq.          | London     | WA1 1DP    | UK      |
+| 5          | Berglunds snabbköp         | Christina Berglund | Berguvsvägen 8       | Luleå      | S-958 22   | Sweden  |
+
+## All Conditions Must Be True
+
+The following SQL statement selects all fields from Customers where Country is "Germany" AND City is "Berlin" AND PostalCode is higher than 12000:
+
+```sql
+-- Select all fields from Customers where Country is "Germany" AND City is "Berlin" AND PostalCode is higher than 12000:
+SELECT * FROM Customers
+WHERE Country = 'Germany'
+AND City = 'Berlin'
+AND PostalCode > 12000;
+```
+
+## Combining AND and OR
+
+You can combine the `AND` and `OR` operators.
+
+The following SQL statement selects all customers from Spain that start with a "G" or an "R".
+
+Make sure you use parenthesis to get the correct result.
+
+```sql
+-- Select all Spanish customers that start with either "G" or "R":
+SELECT * FROM Customers
+WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+```
+
+Without parenthesis, the select statement will return all customers from Spain that start with a "G", plus all customers that start with the letter "R", regardless of the country value:
+
+```sql
+-- Select all customers that either are from Spain and start with either "G", or start with the letter "R":
+SELECT * FROM Customers
+WHERE Country = 'Spain' AND CustomerName LIKE 'G%' OR CustomerName LIKE 'R%';
