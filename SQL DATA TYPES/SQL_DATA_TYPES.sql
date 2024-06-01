@@ -68,7 +68,7 @@ CREATE TABLE DataTypes (
     linestring_column LINESTRING,
     json_column JSON
 );
-
+#[2024-06-01 15:31:08] completed in 20 ms
 
 INSERT INTO DataTypes (
     small_number, large_number, decimal_number, float_number, double_number,
@@ -84,3 +84,4 @@ INSERT INTO DataTypes (
     POINT(1, 1), LINESTRING(1, 1, 2, 2, 3, 3),
     '{"key": "value"}'
 );
+#[2024-06-01 15:44:08] completed in 10 ms
