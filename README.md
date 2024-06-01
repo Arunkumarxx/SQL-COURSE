@@ -4,10 +4,10 @@ This repository contains my SQL course materials, exercises, and notes.
 
 ## Learning Journey
 
-- **Started learning SQL on May 21, 2024.**
+- **Started learning SQL on 21 May, 2024.**
 - Utilized resources from TutorialsPoint and W3Schools.
 - Emphasized learning SQL fundamentals before diving into specific database systems.
-- **Finished learning SQL on June 1, 2024.**
+- **Finished learning SQL on 1 June, 2024.**
 
 ## Contents
 
