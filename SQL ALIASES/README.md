@@ -9,7 +9,7 @@ Aliases are often used to make column names more readable. An alias only exists 
 
 When an alias is used on a column:
 
-```sql
+sql
 SELECT column_name AS alias_name
 FROM table_name;
 ```
