@@ -29,6 +29,5 @@ Avoid quick YouTube tutorials claiming to teach SQL in one hour. Instead, learn 
 
 Used DataGrip by JetBrains and MySQL software for SQL.
 
-Explore the repository and review my progress. If you have any questions, don't hesitate to reach out.
-
+Feel free to explore the repository to review my progress. If you have any questions or suggestions, don't hesitate to reach out. Happy coding! 🚀
 Happy coding!
