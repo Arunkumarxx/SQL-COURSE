@@ -34,3 +34,4 @@ SELECT
     MIN(age) AS min_age,
     SUM(points) AS total_points
 FROM customer;
+
