@@ -1,27 +1,3 @@
-```markdown
-# SQL ALTER TABLE Statement
-
-The `ALTER TABLE` statement is used to add,
- delete, or modify columns in an existing table.
- It is also used to add and drop various constraints
- on an existing table.
-
-## ALTER TABLE - ADD Column
-
-To add a column in a table, use the following syntax:
-
-sql
-ALTER TABLE table_name
-ADD column_name datatype;
-```
-
-### Example
-
-```sql
--- Adding a column called bloodGroup
-ALTER TABLE customers
-ADD bloodGroup varchar(255);
-```
 
 ## ALTER TABLE - DROP Column
 
@@ -88,4 +64,4 @@ MODIFY COLUMN City varchar(255);
 | 8          | Bólido Comidas preparadas | Martín Sommer      | C/ Araquil, 67                | Madrid      | 28023    | Spain   |
 | 9          | Bon app'                  | Laurence Lebihans  | 12, rue des Bouchers          | Marseille   | 13008    | France  |
 | 10         | Bottom-Dollar Marketse    | Elizabeth Lincoln  | 23 Tsawassen Blvd.            | Tsawassen   | T2F 8M4  | Canada  |
-
+```
